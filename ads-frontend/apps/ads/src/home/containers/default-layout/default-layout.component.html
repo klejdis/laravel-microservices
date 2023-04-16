@@ -1,0 +1,120 @@
+<header id="header">
+  <div class="main-menu d-none d-md-block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="nav-top">
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-12 col-md-9 col-lg-10">
+                <div class="d-flex align-items-center">
+                  <div class="logo">
+                    <a href=""
+                      ><img
+                        class="img-fluid"
+                        src="https://modesy.codingest.com/assets/img/logo.svg"
+                        alt="logo"
+                    /></a>
+                  </div>
+                  <div class="top-search-bar">
+                    <form
+                      id="form_validate_search"
+                      class="form_search_main"
+                      novalidate="novalidate"
+                    >
+                      <div class="right">
+                        <input
+                          type="text"
+                          name="search"
+                          maxlength="300"
+                          pattern=".*\S+.*"
+                          id="input_search"
+                          class="form-control input-search"
+                          placeholder="Search for products or members"
+                          required=""
+                          autocomplete="off"
+                        />
+
+                        <button class="btn btn-default btn-search">
+                          <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-2 nav-top-right">
+                <ul class="nav float-end">
+                  <li class="nav-item m-r-0">
+                    <a class="btn btn-md btn-custom btn-sell-now m-r-0"
+                      >Sell Now</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu d-md-none d-lg-none">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="flex-item">
+            <a class="" (click)="openMobileMenuSide()">
+              <fa-icon [icon]="faBars"></fa-icon>
+            </a>
+          </div>
+          <div class="flex-item">
+            <div class="logo">
+              <a class=""
+                ><img
+                  class="img-fluid"
+                  src="https://modesy.codingest.com/assets/img/logo.svg"
+                  alt="logo"
+              /></a>
+            </div>
+          </div>
+          <div class="flex-item">
+            <a class="">
+              <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav-overley-bg d-md-none d-lg-none" [class.d-block]="mobileMenuShown"></div>
+  <div class="mobile-nav-side-container w-50 pt-2 d-md-none d-lg-none" [class.d-block]="mobileMenuShown">
+   <div class="container-fluid">
+    <div class="row">
+      <div class="col d-grid">
+        <a class="btn btn-md btn-custom btn-sell-now btn-block m-r-0">Sell Now</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A list item
+            <span class="right-arrow"><fa-icon [icon]="faArrowRight"></fa-icon></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A second list item
+            <span class="right-arrow"><fa-icon [icon]="faArrowRight"></fa-icon></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A third list item
+            <span class="right-arrow"><fa-icon [icon]="faArrowRight"></fa-icon></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+   </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>
